@@ -255,9 +255,9 @@ under the License.
         <tomcatPath>/path/to/tomcat/instance</tomcatPath>
       </properties>
     </profile>
-    -->
-  </profiles>
 
+  </profiles>
+    -->
   <!-- activeProfiles
    | List of profiles that are active for all builds.
    |
