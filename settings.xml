@@ -130,11 +130,11 @@ under the License.
       <passphrase>optional; leave empty if not used.</passphrase>
     </server>
     -->
-	<server>
-    	<id>wb-tdp-codeartifact-repo</id>
-    	<username>aws</username>
-    	<password>${env.CODEARTIFACT_TOKEN}</password>
-	</server>
+    <server>
+      <id>wb-tdp-framework-repo</id>
+      <username>aws</username>
+      <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+    </server>
   </servers>
 
   <!-- mirrors
@@ -193,19 +193,19 @@ under the License.
    |
    |-->
   <profiles>
-	  <profile>
-	    <id>wb-tdp-codeartifact-repo</id>
-	    <activation>
-	      <activeByDefault>true</activeByDefault>
-	    </activation>
-	    <repositories>
-	      <repository>
-	        <id>wb-tdp-codeartifact-repo</id>
-	        <url>https://wb-tdp-580753801134.d.codeartifact.ap-south-1.amazonaws.com/maven/codeartifact-repo/</url>
-	      </repository>
-	    </repositories>
-	  </profile>
-
+    <profile>
+    <id>wb-tdp-framework-repo</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>wb-tdp-framework-repo</id>
+        <url>https://wb-tdp-580753801134.d.codeartifact.ap-south-1.amazonaws.com/maven/framework-repo/</url>
+      </repository>
+    </repositories>
+    </profile>
+	  
     <!-- profile
      | Specifies a set of introductions to the build process, to be activated using one or more of the
      | mechanisms described above. For inheritance purposes, and to activate profiles via <activatedProfiles/>
