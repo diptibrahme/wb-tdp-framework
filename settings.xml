@@ -131,7 +131,7 @@ under the License.
     </server>
     -->
     <server>
-      <id>wb-tdp-framework-repo</id>
+      <id>${CODEARTIFACT_REPO_ID}</id>
       <username>aws</username>
       <password>${env.CODEARTIFACT_TOKEN}</password>
     </server>
@@ -192,20 +192,6 @@ under the License.
    |       variables for plugins in the POM.
    |
    |-->
-  <profiles>
-    <profile>
-    <id>wb-tdp-framework-repo</id>
-    <activation>
-      <activeByDefault>true</activeByDefault>
-    </activation>
-    <repositories>
-      <repository>
-        <id>wb-tdp-framework-repo</id>
-        <url>https://wb-tdp-580753801134.d.codeartifact.ap-south-1.amazonaws.com/maven/framework-repo/</url>
-      </repository>
-    </repositories>
-    </profile>
-	  
     <!-- profile
      | Specifies a set of introductions to the build process, to be activated using one or more of the
      | mechanisms described above. For inheritance purposes, and to activate profiles via <activatedProfiles/>
