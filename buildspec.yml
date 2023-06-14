@@ -10,7 +10,7 @@ phases:
     commands:
     - echo Build started on `date`
     - export CODEARTIFACT_TOKEN=`aws codeartifact get-authorization-token --domain ${CODEARTIFACT_DOMAIN} --domain-owner ${AWS_ACCOUNT_ID} --region ${AWS_REGION} --query authorizationToken --output text`
-    - mvn -s settings.xml clean package deploy -DaltDeploymentRepository=${CODEARTIFACT_REPO_ID}::${CODEARTIFACT_REPO_URL}
+    - mvn -s settings.xml clean package deploy -DaltDeploymentRepository=${CODEARTIFACT_REPO_ID}::${CODEARTIFACT_REPO_URL} -Dserver.CODEARTIFACT_REPO_ID=${CODEARTIFACT_REPO_ID}
   post_build:
     commands:
     - echo Build completed on `date`
