@@ -20,16 +20,14 @@
 		<docx4j.version>3.3.5</docx4j.version>
 	</properties>
 	
-
 	<distributionManagement>
-	  <repository>
-	    <id>wb-tdp-codeartifact-repo</id>
-	    <name>wb-tdp-codeartifact-repo</name>
-	    <url>https://wb-tdp-580753801134.d.codeartifact.ap-south-1.amazonaws.com/maven/codeartifact-repo/</url>
-	  </repository>
+  		<repository>
+    		<id>wb-tdp-framework-repo</id>
+    		<name>wb-tdp-framework-repo</name>
+    		<url>https://wb-tdp-580753801134.d.codeartifact.ap-south-1.amazonaws.com/maven/framework-repo/</url>
+  		</repository>
 	</distributionManagement>
 
-	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
